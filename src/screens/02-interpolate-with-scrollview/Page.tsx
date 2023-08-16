@@ -1,11 +1,7 @@
-import { Dimensions, View, StyleSheet, Text } from "react-native";
-import Animated, {
-  Extrapolate,
-  interpolate,
-  useAnimatedStyle,
-} from "react-native-reanimated";
+import { Dimensions, View, StyleSheet, Text } from 'react-native';
+import Animated, { Extrapolate, interpolate, useAnimatedStyle } from 'react-native-reanimated';
 
-const { height, width } = Dimensions.get("window");
+const { height, width } = Dimensions.get('window');
 
 const SIZE = width * 0.7;
 
@@ -19,12 +15,7 @@ export const Page = ({ title, index, translateX }: PageProps) => {
   const inputRange = [(-index - 1) * width, index * width, (index + 1) * width];
 
   const rStyle = useAnimatedStyle(() => {
-    const scale = interpolate(
-      translateX.value,
-      inputRange,
-      [0, 1, 0],
-      Extrapolate.CLAMP
-    );
+    const scale = interpolate(translateX.value, inputRange, [0, 1, 0], Extrapolate.CLAMP);
     const borderRadius = interpolate(
       translateX.value,
       inputRange,
@@ -45,12 +36,7 @@ export const Page = ({ title, index, translateX }: PageProps) => {
       Extrapolate.CLAMP
     );
 
-    const opacity = interpolate(
-      translateX.value,
-      inputRange,
-      [-2, 1, -2],
-      Extrapolate.CLAMP
-    );
+    const opacity = interpolate(translateX.value, inputRange, [-2, 1, -2], Extrapolate.CLAMP);
 
     return {
       opacity,
@@ -63,12 +49,7 @@ export const Page = ({ title, index, translateX }: PageProps) => {
   });
 
   return (
-    <View
-      style={[
-        styles.container,
-        { backgroundColor: `rgba(0,0,256, 0.${index + 2})` },
-      ]}
-    >
+    <View style={[styles.container, { backgroundColor: `rgba(0,0,256, 0.${index + 2})` }]}>
       <Animated.View style={[styles.square, rStyle]} />
       <Animated.View style={[styles.textContainer, rTextStyle]}>
         <Text style={styles.text}>{title}</Text>
@@ -81,19 +62,19 @@ const styles = StyleSheet.create({
   container: {
     width,
     height,
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   square: {
     width: SIZE,
     height: SIZE,
-    backgroundColor: "rgba(0, 0, 256, 0.4)",
+    backgroundColor: 'rgba(0, 0, 256, 0.4)',
   },
   text: {
     fontSize: 60,
-    color: "white",
-    textTransform: "uppercase",
-    fontWeight: "700",
+    color: 'white',
+    textTransform: 'uppercase',
+    fontWeight: '700',
   },
-  textContainer: { position: "absolute" },
+  textContainer: { position: 'absolute' },
 });

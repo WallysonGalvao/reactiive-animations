@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
-import { TouchableOpacity, StyleSheet, Text } from "react-native";
-
+import { useEffect } from 'react';
+import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 import Animated, {
   SharedValue,
   useAnimatedStyle,
   useSharedValue,
   withRepeat,
   withSpring,
-} from "react-native-reanimated";
+} from 'react-native-reanimated';
 
 const SIZE = 100;
 
@@ -17,7 +16,7 @@ const SIZE = 100;
  * @returns A string that represents a CSS transform value.
  */
 const rotate = (progress: SharedValue<number>) => {
-  "worklet";
+  'worklet';
 
   return `${progress.value * 2 * Math.PI}rad`;
 };
@@ -35,11 +34,7 @@ export const Introduction = () => {
   }));
 
   const handleAnimation = () => {
-    progress.value = withRepeat(
-      withSpring(progress.value === 1 ? 0.5 : 1),
-      3,
-      true
-    );
+    progress.value = withRepeat(withSpring(progress.value === 1 ? 0.5 : 1), 3, true);
     scale.value = withRepeat(withSpring(scale.value === 2 ? 1 : 2), 3, true);
   };
 
@@ -48,24 +43,30 @@ export const Introduction = () => {
   }, []);
 
   return (
-    <>
+    <View style={styles.container}>
       <Animated.View style={[styles.view, animatedStyle]} />
       <TouchableOpacity onPress={handleAnimation} style={styles.button}>
         <Text style={styles.text}>animate</Text>
       </TouchableOpacity>
-    </>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   view: {
     width: SIZE,
     height: SIZE,
-    backgroundColor: "blue",
+    backgroundColor: 'blue',
   },
   button: {
     padding: 10,
-    position: "absolute",
+    position: 'absolute',
     bottom: 250,
   },
   text: {

@@ -1,39 +1,39 @@
-import { useState } from "react";
-import { Dimensions, StyleSheet, Switch, Text, View } from "react-native";
+import { useState } from 'react';
+import { Dimensions, StyleSheet, Switch } from 'react-native';
 import Animated, {
   interpolateColor,
   useAnimatedStyle,
   useDerivedValue,
   withTiming,
-} from "react-native-reanimated";
+} from 'react-native-reanimated';
 
-const SIZE = Dimensions.get("window").width * 0.7;
+const SIZE = Dimensions.get('window').width * 0.7;
 
 const Colors = {
   dark: {
-    background: "#1E1E1E",
-    circle: "#252525",
-    text: "#F8F8F8",
+    background: '#1E1E1E',
+    circle: '#252525',
+    text: '#F8F8F8',
   },
   light: {
-    background: "#F8F8F8",
-    circle: "#FFF",
-    text: "#1E1E1E",
+    background: '#F8F8F8',
+    circle: '#FFF',
+    text: '#1E1E1E',
   },
 };
 
 const SWITCH_TRACK_COLOR = {
-  true: "rgba(256, 0, 256, 0.2)",
-  false: "rgba(0,0,0,0.1)",
+  true: 'rgba(256, 0, 256, 0.2)',
+  false: 'rgba(0,0,0,0.1)',
 };
 
-type Theme = "light" | "dark";
+type Theme = 'light' | 'dark';
 
 export const InterporlateColors = () => {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>('light');
 
   const progress = useDerivedValue(
-    () => (theme === "dark" ? withTiming(1) : withTiming(0)),
+    () => (theme === 'dark' ? withTiming(1) : withTiming(0)),
     [theme]
   );
 
@@ -58,11 +58,7 @@ export const InterporlateColors = () => {
   });
 
   const rTextStyle = useAnimatedStyle(() => {
-    const color = interpolateColor(
-      progress.value,
-      [0, 1],
-      [Colors.light.text, Colors.dark.text]
-    );
+    const color = interpolateColor(progress.value, [0, 1], [Colors.light.text, Colors.dark.text]);
 
     return { color };
   });
@@ -72,12 +68,12 @@ export const InterporlateColors = () => {
       <Animated.Text style={[styles.text, rTextStyle]}>Theme</Animated.Text>
       <Animated.View style={[styles.circle, rCircleStyle]}>
         <Switch
-          value={theme === "dark"}
+          value={theme === 'dark'}
           onValueChange={(toggled) => {
-            setTheme(toggled ? "dark" : "light");
+            setTheme(toggled ? 'dark' : 'light');
           }}
           trackColor={SWITCH_TRACK_COLOR}
-          thumbColor={"violet"}
+          thumbColor="violet"
         />
       </Animated.View>
     </Animated.View>
@@ -86,17 +82,17 @@ export const InterporlateColors = () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
-    height: "100%",
-    alignItems: "center",
-    justifyContent: "center",
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   circle: {
     width: SIZE,
     height: SIZE,
-    backgroundColor: "#FFF",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#FFF',
+    alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: SIZE / 2,
     shadowOffset: {
       width: 0,
@@ -108,8 +104,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 70,
-    textTransform: "uppercase",
-    fontWeight: "700",
+    textTransform: 'uppercase',
+    fontWeight: '700',
     letterSpacing: 14,
     marginBottom: 35,
   },
