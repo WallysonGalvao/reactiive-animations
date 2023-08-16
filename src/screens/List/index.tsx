@@ -12,6 +12,7 @@ const items: Item[] = [
   { screen: 'AnimatedScrollView', title: 'interpolate-with-scrollview' },
   { screen: 'InterporlateColors', title: 'interpolate-color' },
   { screen: 'PinchGestureHandlerBasics', title: 'pinch-gesture-handler-basics' },
+  { screen: 'DoubleTapGestureHandler', title: 'double-tap-gesture-handler' },
 ];
 
 export const List = () => {

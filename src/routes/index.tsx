@@ -5,6 +5,7 @@ import { PanGestureBasics } from '../screens/01-pan-gesture-handler-basics';
 import { AnimatedScrollView } from '../screens/02-interpolate-with-scrollview';
 import { InterporlateColors } from '../screens/03-interpolate-color';
 import { PinchGestureHandlerBasics } from '../screens/04-pinch-gesture-handler-basics';
+import { DoubleTapGestureHandler } from '../screens/05-double-tap-gesture-handler';
 import { List } from '../screens/List';
 
 export type StackParamList = {
@@ -14,6 +15,7 @@ export type StackParamList = {
   AnimatedScrollView: undefined;
   InterporlateColors: undefined;
   PinchGestureHandlerBasics: undefined;
+  DoubleTapGestureHandler: undefined;
 };
 
 const Stack = createNativeStackNavigator<StackParamList>();
@@ -28,6 +30,7 @@ export const Route = () => {
         <Stack.Screen name="AnimatedScrollView" component={AnimatedScrollView} />
         <Stack.Screen name="InterporlateColors" component={InterporlateColors} />
         <Stack.Screen name="PinchGestureHandlerBasics" component={PinchGestureHandlerBasics} />
+        <Stack.Screen name="DoubleTapGestureHandler" component={DoubleTapGestureHandler} />
       </Stack.Group>
     </Stack.Navigator>
   );
