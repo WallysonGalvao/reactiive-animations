@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import { FlatList, Pressable, StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { StackParamList } from '../../routes';
+import { StackParamList } from '../routes';
 
 type Item = { screen: keyof StackParamList; title: string };
 
@@ -13,6 +13,7 @@ const items: Item[] = [
   { screen: 'InterporlateColors', title: 'interpolate-color' },
   { screen: 'PinchGestureHandlerBasics', title: 'pinch-gesture-handler-basics' },
   { screen: 'DoubleTapGestureHandler', title: 'double-tap-gesture-handler' },
+  { screen: 'ScrollBehaviorWithPanGesture', title: 'scroll-behavior-with-pan-gesture' },
 ];
 
 export const List = () => {
