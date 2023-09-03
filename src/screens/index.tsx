@@ -14,6 +14,7 @@ const items: Item[] = [
   { screen: 'PinchGestureHandlerBasics', title: 'pinch-gesture-handler-basics' },
   { screen: 'DoubleTapGestureHandler', title: 'double-tap-gesture-handler' },
   { screen: 'ScrollBehaviorWithPanGesture', title: 'scroll-behavior-with-pan-gesture' },
+  { screen: 'ColorPicker', title: 'color-picker' },
 ];
 
 export const List = () => {

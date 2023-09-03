@@ -8,6 +8,7 @@ import { InterporlateColors } from '../screens/03-interpolate-color';
 import { PinchGestureHandlerBasics } from '../screens/04-pinch-gesture-handler-basics';
 import { DoubleTapGestureHandler } from '../screens/05-double-tap-gesture-handler';
 import { ScrollBehaviorWithPanGesture } from '../screens/06-scroll-behavior-with-pan-gesture';
+import { ColorPicker } from '../screens/07-color-picker';
 
 export type StackParamList = {
   List: undefined;
@@ -18,6 +19,7 @@ export type StackParamList = {
   PinchGestureHandlerBasics: undefined;
   DoubleTapGestureHandler: undefined;
   ScrollBehaviorWithPanGesture: undefined;
+  ColorPicker: undefined;
 };
 
 const Stack = createNativeStackNavigator<StackParamList>();
@@ -37,6 +39,7 @@ export const Route = () => {
           name="ScrollBehaviorWithPanGesture"
           component={ScrollBehaviorWithPanGesture}
         />
+        <Stack.Screen name="ColorPicker" component={ColorPicker} />
       </Stack.Group>
     </Stack.Navigator>
   );
