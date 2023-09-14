@@ -26,7 +26,7 @@ const Stack = createNativeStackNavigator<StackParamList>();
 
 export const Route = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="List">
       <Stack.Group>
         <Stack.Screen name="List" component={List} />
         <Stack.Screen name="Introduction" component={Introduction} />

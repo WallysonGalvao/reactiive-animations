@@ -2,14 +2,11 @@ import { useNavigation } from '@react-navigation/native';
 import { FlatList, Pressable, StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { StackParamList } from '../routes';
+import { StackParamList } from './routes';
 
 type Item = { screen: keyof StackParamList; title: string };
 
-const items: Item[] = [
-  { screen: 'Reactiive', title: 'reactiive' },
-  { screen: 'AnimationLab', title: 'animation-lab' },
-];
+const items: Item[] = [{ screen: 'PixelatedImage', title: 'pixelated-image' }];
 
 export const List = () => {
   const { navigate } = useNavigation();
