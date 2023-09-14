@@ -6,16 +6,7 @@ import { StackParamList } from '../routes';
 
 type Item = { screen: keyof StackParamList; title: string };
 
-const items: Item[] = [
-  { screen: 'Introduction', title: 'introduction-to-reanimated-2' },
-  { screen: 'PanGestureBasics', title: 'pan-gesture-handler-basics' },
-  { screen: 'AnimatedScrollView', title: 'interpolate-with-scrollview' },
-  { screen: 'InterporlateColors', title: 'interpolate-color' },
-  { screen: 'PinchGestureHandlerBasics', title: 'pinch-gesture-handler-basics' },
-  { screen: 'DoubleTapGestureHandler', title: 'double-tap-gesture-handler' },
-  { screen: 'ScrollBehaviorWithPanGesture', title: 'scroll-behavior-with-pan-gesture' },
-  { screen: 'ColorPicker', title: 'color-picker' },
-];
+const items: Item[] = [{ screen: 'Reactiive', title: 'reactiive' }];
 
 export const List = () => {
   const { navigate } = useNavigation();
