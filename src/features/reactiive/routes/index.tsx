@@ -9,6 +9,7 @@ import { PinchGestureHandlerBasics } from '../04-pinch-gesture-handler-basics';
 import { DoubleTapGestureHandler } from '../05-double-tap-gesture-handler';
 import { ScrollBehaviorWithPanGesture } from '../06-scroll-behavior-with-pan-gesture';
 import { ColorPicker } from '../07-color-picker';
+import { SmoothDropdown } from '../16-smooth-dropdown';
 
 export type StackParamList = {
   List: undefined;
@@ -20,6 +21,7 @@ export type StackParamList = {
   DoubleTapGestureHandler: undefined;
   ScrollBehaviorWithPanGesture: undefined;
   ColorPicker: undefined;
+  SmoothDropdown: undefined;
 };
 
 const Stack = createNativeStackNavigator<StackParamList>();
@@ -40,6 +42,7 @@ export const Route = () => {
           component={ScrollBehaviorWithPanGesture}
         />
         <Stack.Screen name="ColorPicker" component={ColorPicker} />
+        <Stack.Screen name="SmoothDropdown" component={SmoothDropdown} />
       </Stack.Group>
     </Stack.Navigator>
   );
