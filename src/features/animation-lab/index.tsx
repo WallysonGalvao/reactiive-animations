@@ -6,7 +6,10 @@ import { StackParamList } from './routes';
 
 type Item = { screen: keyof StackParamList; title: string };
 
-const items: Item[] = [{ screen: 'PixelatedImage', title: 'pixelated-image' }];
+const items: Item[] = [
+  { screen: 'PixelatedImage', title: 'pixelated-image' },
+  { screen: 'TypographyMetaball', title: 'typography-metaball' },
+];
 
 export const List = () => {
   const { navigate } = useNavigation();

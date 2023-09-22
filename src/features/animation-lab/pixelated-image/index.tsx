@@ -18,7 +18,6 @@ export const PixelatedImage = () => {
   }
 
   const particles = makeImageParticles(image, 35, 15, stageWidth, stageHeight);
-  console.log({ particles });
 
   const pan = Gesture.Pan()
     .runOnJS(true)
