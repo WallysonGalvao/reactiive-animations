@@ -2,9 +2,9 @@ import { useNavigation } from '@react-navigation/native';
 import { FlatList, Pressable, StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { StackParamList } from './routes';
+import { ReactiiveStackParamList } from './routes';
 
-type Item = { screen: keyof StackParamList; title: string };
+type Item = { screen: keyof ReactiiveStackParamList; title: string };
 
 const items: Item[] = [
   { screen: 'Introduction', title: 'introduction-to-reanimated-2' },
@@ -21,7 +21,7 @@ const items: Item[] = [
 export const List = () => {
   const { navigate } = useNavigation();
 
-  const onPress = (screen: keyof StackParamList) => navigate(screen);
+  const onPress = (screen: keyof ReactiiveStackParamList) => navigate(screen);
 
   const keyExtractor = (item: Item) => item.screen;
 

@@ -2,9 +2,9 @@ import { useNavigation } from '@react-navigation/native';
 import { FlatList, Pressable, StyleSheet, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { StackParamList } from './routes';
+import { AnimationLabStackParamList } from './routes';
 
-type Item = { screen: keyof StackParamList; title: string };
+type Item = { screen: keyof AnimationLabStackParamList; title: string };
 
 const items: Item[] = [
   { screen: 'PixelatedImage', title: 'pixelated-image' },
@@ -15,7 +15,7 @@ const items: Item[] = [
 export const List = () => {
   const { navigate } = useNavigation();
 
-  const onPress = (screen: keyof StackParamList) => navigate(screen);
+  const onPress = (screen: keyof AnimationLabStackParamList) => navigate(screen);
 
   const keyExtractor = (item: Item) => item.screen;
 

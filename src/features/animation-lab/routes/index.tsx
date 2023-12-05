@@ -5,14 +5,14 @@ import { ColorPixelated } from '../color-pixelated';
 import { PixelatedImage } from '../pixelated-image';
 import { TypographyMetaball } from '../typography-metaball';
 
-export type StackParamList = {
+export type AnimationLabStackParamList = {
   List: undefined;
   PixelatedImage: undefined;
   TypographyMetaball: undefined;
   ColorPixelated: undefined;
 };
 
-const Stack = createNativeStackNavigator<StackParamList>();
+const Stack = createNativeStackNavigator<AnimationLabStackParamList>();
 
 export const Route = () => {
   return (

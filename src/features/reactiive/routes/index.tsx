@@ -11,7 +11,7 @@ import { ScrollBehaviorWithPanGesture } from '../06-scroll-behavior-with-pan-ges
 import { ColorPicker } from '../07-color-picker';
 import { SmoothDropdown } from '../16-smooth-dropdown';
 
-export type StackParamList = {
+export type ReactiiveStackParamList = {
   List: undefined;
   Introduction: undefined;
   PanGestureBasics: undefined;
@@ -24,7 +24,7 @@ export type StackParamList = {
   SmoothDropdown: undefined;
 };
 
-const Stack = createNativeStackNavigator<StackParamList>();
+const Stack = createNativeStackNavigator<ReactiiveStackParamList>();
 
 export const Route = () => {
   return (
