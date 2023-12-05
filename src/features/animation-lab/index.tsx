@@ -9,6 +9,7 @@ type Item = { screen: keyof StackParamList; title: string };
 const items: Item[] = [
   { screen: 'PixelatedImage', title: 'pixelated-image' },
   { screen: 'TypographyMetaball', title: 'typography-metaball' },
+  { screen: 'ColorPixelated', title: 'color-pixelated' },
 ];
 
 export const List = () => {

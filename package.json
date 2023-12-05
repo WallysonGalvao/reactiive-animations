@@ -11,8 +11,8 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "@react-navigation/native": "^6.1.7",
-    "@react-navigation/native-stack": "^6.9.13",
+    "@react-navigation/native": "^6.1.9",
+    "@react-navigation/native-stack": "^6.9.17",
     "@shopify/react-native-skia": "0.1.196",
     "color": "^4.2.3",
     "expo": "^49.0.0",
@@ -20,7 +20,7 @@
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.72.4",
+    "react-native": "0.72.6",
     "react-native-gesture-handler": "~2.12.0",
     "react-native-reanimated": "~3.3.0",
     "react-native-safe-area-context": "4.6.3",
